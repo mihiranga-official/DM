@@ -1,0 +1,30 @@
+/* body{
+    margin: 0;
+    padding: 0;
+}
+.mainHeader{
+
+    border: 2px solid red;
+}
+.container{
+
+    display: grid;
+    
+
+   
+}
+.second{
+    border: 2px solid red;
+    
+}
+
+
+.secondContainer{
+    border: 2px solid rgb(26, 159, 37);
+    margin-top: 5px;
+    border-collapse: collapse;
+} */
+table, th,td{
+    border-collapse:collapse ;
+    border: 2px solid rgb(88, 189, 96);
+}

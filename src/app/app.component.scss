@@ -1,0 +1,95 @@
+/* Navbar Styles */
+nav {
+  border: 1px solid rgb(68, 67, 67);
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 
+}
+
+.navbar {
+  opacity: 0.9;
+  
+  
+}
+
+
+a {
+  font-size: 0.8rem;
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #04AA6D; /* Change hover color if desired */
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover Effects */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change dropdown button color on hover */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Additional Navbar Adjustments */
+.navbar-nav .nav-item .nav-link {
+  padding: 8px 16px; 
+  color: black; 
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #04AA6D;
+}
+
+.navbar-brand {
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border-color: #04AA6D; 
+}
+
+.navbar-toggler-icon {
+  background-color: #04AA6D;
+}

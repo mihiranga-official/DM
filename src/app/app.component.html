@@ -1,43 +1,170 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand ml-2" href="#">Damro Inventory</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['']">Home </a>
-      </li>
-   
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <button (click)="onClickOnTheme()" mat-icon-button>
-          <mat-icon>{{ isDark ? 'wb_sunny' : 'nights_stay' }}</mat-icon>
-        </button>
-      </li>
-      
-        
-      
-    </ul>
-    <ul class="nav-item  mt-2 mr-2">
-      <a class="nav-link"[routerLink]="['/login']">Login</a>
-    </ul>
-    <ul class="nav-item mt-2 mr-2">
-<a class="nav-link"[routerLink]="['/registration']" >Registration</a>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar sticky-top navbar-expand-lg">
+    <a class="fw-bold navbar-brand ml-2" href="#">Damro Inventory</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse fw-bold" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a
+            class="nav-link fw-bold"
+            [routerLink]="['']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold link-underline-opacity-25"
+            href="#"
+            id="productManagementDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Product Management</a
+          >
+          <div class="dropdown-menu" aria-labelledby="productManagementDropdown">
+            <a class="dropdown-item" href="" routerLink="/addProducts">Add Products</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold"
+            href="#"
+            id="orderManagementDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Order Management</a
+          >
+          <div class="dropdown-menu" aria-labelledby="orderManagementDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold"
+            href="#"
+            id="supplierManagementDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Supplier Management</a
+          >
+          <div class="dropdown-menu" aria-labelledby="supplierManagementDropdown">
+            <a class="dropdown-item" href="">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold"
+            href="#"
+            id="customerManagementDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Customer Management</a
+          >
+          <div class="dropdown-menu" aria-labelledby="customerManagementDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold"
+            href="#"
+            id="reportsAnalyticsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Reports and Analytics</a
+          >
+          <div class="dropdown-menu" aria-labelledby="reportsAnalyticsDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a
+            class="nav-link dropdown-toggle fw-bold"
+            href="#"
+            id="auditLogsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Audit Logs</a
+          >
+          <div class="dropdown-menu" aria-labelledby="auditLogsDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="settingsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Settings</a
+          >
+          <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item fw-bold">
+          <a class="nav-link" [routerLink]="['/login']">
+            <i class="bi bi-person"></i> Login</a
+          >
+        </li>
+        <li class="nav-item fw-bold">
+          <a class="nav-link" [routerLink]="['/registration']">
+            <i class="bi bi-person-add"></i> Registration</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div>

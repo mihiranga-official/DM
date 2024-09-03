@@ -3,32 +3,40 @@
   <div class="">
     <form class="mt-3">
       <div class="my-3 mx-5">
-        <h1 class="text-center">Registration Form</h1>
+        <h1 class="text-center"><i class="bi bi-person-add "></i>Admin Registration Form</h1>
       </div>
-      <div class="my-3 mx-auto col-md-6 col-sm-6">
+      <div class="input-group my-3 mx-auto col-md-6 col-sm-6">
+        <span aria-describedby="basic-addon1" aria-label="Username" class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i> </span>
         <input
+        data-toggle="tooltip" data-placement="right" title="Please Enter New Username "aria-describedby="basic-addon1" aria-label="userName" 
           placeholder="Enter New Username"
           formControlName="userName"
-          type="email"
+          type="text"
           class="form-control mx-auto"
-          id="emailId"
+          id="userName"
      
         />
       </div>
-      <div class="my-3 mx-auto col-md-6 col-sm-6">
-        <input type="email" placeholder="Enter New Email Address" formControlName="emailAddress" class="form-control mx-auto">
+      <div class="input-group my-3 mx-auto col-md-6 col-sm-6">
+        <span aria-describedby="basic-addon1" aria-label="password" class="input-group-text" id="basic-addon1"><i class="bi bi-envelope-at"></i> </span>
+        <input data-toggle="tooltip" data-placement="right" title="Please Enter New Email "aria-describedby="basic-addon1" aria-label="password"  type="email" placeholder="Enter New Email Address" formControlName="emailAddress" class="form-control mx-auto">
 
       </div>
-      <div class="my-3 mx-auto col-md-6 col-sm-6">
+      <div class="input-group my-3 mx-auto col-md-6 col-sm-6">
+        <span aria-describedby="basic-addon1" aria-label="password" class="input-group-text" id="basic-addon1"><i class="bi bi-keyboard"></i> </span>
         <input
+        data-toggle="tooltip" data-placement="right" title="Please Enter New Password "aria-describedby="basic-addon1" aria-label="password" 
           placeholder="Enter New Password"
           type="password"
           formControlName="password"
           class="form-control mx-auto"
         />
       </div>
-      <div class="my-3 mx-auto col-md-6 col-sm-6">
+      <div  class="input-group my-3 mx-auto col-md-6 col-sm-6">
+        <span aria-describedby="basic-addon1" aria-label="reTypePassword" class="input-group-text" id="basic-addon1"><i class="bi bi-keyboard-fill"></i> </span>
+
         <input
+        data-toggle="tooltip" data-placement="right" title="Please  Re-Enter Password "aria-describedby="basic-addon1" aria-label="password" 
           type="password"
           placeholder="Re-Enter Password"
           formControlName="reTypePassword"
@@ -38,11 +46,13 @@
   
       <div class="my-3 mx-auto col-md-6 col-sm-6">
       
+      <button class="btn btn-link underline mb-3" >Registerd ? Login Here</button>
+
+        <button type="submit" class="btn btn-success">Register</button>
+  
       </div>
   
-      <div class="my-3 mx-auto col-md-6 col-sm-6">
-        <button type="submit" class="btn btn-success">Register</button>
-      </div>
+    
     </form>
   </div>
 </div>
