@@ -1,4 +1,4 @@
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>id</th>
@@ -10,5 +10,22 @@
       <td>{{sample.id}}</td>
       <td>{{sample.name}}</td>
     </tr>
+  </tbody>
+</table> -->
+<table>
+  <thead>
+    <tr>
+      <th>NIC</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+    </tr>
+   
+  </thead>
+  <tbody>
+    <tr *ngFor="let DataSets of Datas">
+    <td>{{DataSets.nic}}</td>
+    <td>{{DataSets.firstName}}</td>
+    <td>{{DataSets.lastname}}</td>
+  </tr>
   </tbody>
 </table>

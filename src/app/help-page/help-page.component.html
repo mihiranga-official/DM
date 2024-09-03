@@ -1,0 +1,18 @@
+<p>help-page works!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Helper Id</th>
+      <th>Helper Name</th>
+      <th>Supervisor Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sharps">
+      <td>{{ item.helperId }}</td>
+      <td>{{ item.helperName }}</td>
+      <td>{{ item.supervisorId }}</td>
+    </tr>
+  </tbody>
+</table>

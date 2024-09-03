@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TableObjectService } from '../table-object.service';
 import { CommonModule } from '@angular/common';
+import { TableService } from '../table.service';
 
 @Component({
   selector: 'app-add-products',
@@ -10,17 +11,17 @@ import { CommonModule } from '@angular/common';
   styleUrl: './add-products.component.css'
 })
 export class AddProductsComponent implements OnInit {
-  constructor(private service: TableObjectService) {
+  constructor(private service: TableService) {
 
   }
   
-  samples:any[] = [];
+  Datas:any[] = [];
   ngOnInit(): void {
-    this.service.getAllStudent()
+    this.service.getAllDataSet()
               .subscribe({
                 next:res=>{
-                  this.samples=res
-                  console.log("com",this.samples)
+                  this.Datas=res
+                  console.log("com",this.Datas)
                 },
                 error:err=>console.log(err)
                 
