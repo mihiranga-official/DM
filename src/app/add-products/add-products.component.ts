@@ -42,3 +42,9 @@ this.selectValues=[
 
 
 }
+
+//There four Types of bindings 
+/* 1 intoploation
+2 porperty binding
+3 event binding 
+4 two way bindiang */
