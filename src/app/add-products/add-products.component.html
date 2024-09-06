@@ -1,31 +1,138 @@
-<!-- <table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let sample of samples">
-      <td>{{sample.id}}</td>
-      <td>{{sample.name}}</td>
-    </tr>
-  </tbody>
-</table> -->
-<table>
-  <thead>
-    <tr>
-      <th>NIC</th>
-      <th>FirstName</th>
-      <th>LastName</th>
-    </tr>
-   
-  </thead>
-  <tbody>
-    <tr *ngFor="let DataSets of Datas">
-    <td>{{DataSets.nic}}</td>
-    <td>{{DataSets.firstName}}</td>
-    <td>{{DataSets.lastname}}</td>
-  </tr>
-  </tbody>
-</table>
+<!-- <div class="table-responsive">
+  <table class="table" style="margin-top: 10px">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Total Ernings</th>
+        <th>Total Piecerate</th>
+        <th>Total DailyPay B=(K+G+H)</th>
+        <th>Effieency C = (A-B)</th>
+        <th>In Date & Time</th>
+        <th>Out Date & Time</th>
+        <th>Shift</th>
+        <th>Section</th>
+        <th>Basic Salary (K)</th>
+        <th>Incentive (G)</th>
+        <th>O/T (H)</th>
+        <th>Activity</th>
+        <th>OpHp</th>
+        <th>QTY per Emp(D)</th>
+        <th>Rate (E)</th>
+        <th>Pieacerate Ammount:F=(DxE)</th>
+      </tr>
+    </thead>
+    <ng-container>
+      <tbody *ngFor="let jobCardDataSet of datasets">
+        <tr>
+          <td>{{ jobCardDataSet.divisionName }}</td>
+          <td>{{ jobCardDataSet.employeeName }}</td>
+          <td>{{ jobCardDataSet.employeeId }}</td>
+          <td>{{ jobCardDataSet.month }}</td>
+          <td>{{ jobCardDataSet.epfNumber }}</td>
+          <td>{{ jobCardDataSet.basicSalary }}</td>
+          <td>{{ jobCardDataSet.serviceYear }}</td>
+          <td>{{ jobCardDataSet.totalDailyPaySalary }}</td>
+          <td>{{ jobCardDataSet.totalOtAmount }}</td>
+          <td>{{ jobCardDataSet.totalPieceRateSalaryAmount }}</td>
+          <td>{{ jobCardDataSet.extraPieceRatePercentage }}</td>
+          <td>{{ jobCardDataSet.extraPiecerateSalary }}</td>
+          <td>{{ jobCardDataSet.totalPieceRateHours }}</td>
+          <td>{{ jobCardDataSet.totalNormalHours }}</td>
+          <td>{{ jobCardDataSet.totalWorkHours }}</td>
+          <td>{{ jobCardDataSet.totalNormalSalary }}</td>
+          <td>{{ jobCardDataSet.totalPaidSalary }}</td>
+        </tr>
+
+        <ng-container *ngFor="let data of jobCardDataSet.dailySums">
+          <tr>
+            <td>{{ data.inDate }}</td>
+            <td>{{ data.sumPieceRate }}</td>
+            <td>{{ data.sumDailyPay }}</td>
+            <td>{{ data.sumPaidSalary }}</td>
+            <td>{{ data.sumDifference }}</td>
+            <td>{{ data.dailySumRecordCount }}</td>
+            <td>{{ data.sumPieceRate }}</td>
+          </tr>
+
+          <ng-container *ngFor="let item of data.timePortionSums">
+            <tr>
+              <td>{{ item.inDate }}</td>
+              <td>{{ item.inTime }}</td>
+              <td>{{ item.outTime }}</td>
+              <td>{{ item.outDate }}</td>
+              <td>{{ item.shiftName }}</td>
+              <td>{{ item.t_SumDailyPay }}</td>
+              <td>{{ item.t_SumDifference }}</td>
+              <td>{{ item.incentiveSalary }}</td>
+              <td>{{ item.normalHours }}</td>
+              <td>{{ item.overTimeAmount }}</td>
+              <td>{{ item.overTimeHours }}</td>
+              <td>{{ item.timePortionRecordCount }}</td>
+            </tr>
+     
+            <ng-container *ngFor="let structuers of item.dayDetaiPieceRates" >   
+              <tr >
+              <td>{{ structuers.activityName }}</td>
+              <td>{{ structuers.numberOfOperators }}</td>
+              <td>{{ structuers.numberOfHelpers }}</td>
+              <td>{{ structuers.quantityPerEmployee }}</td>
+              <td>{{ structuers.rate }}</td>
+              <td>{{ structuers.payingSalary }}</td>
+              <td>{{ structuers.qty }}</td>
+              <td>{{ structuers.rateTypeName }}</td>
+            </tr>
+            </ng-container>
+           
+           
+      
+          </ng-container>
+        </ng-container>
+        
+      </tbody>
+    </ng-container>
+  </table>
+</div> -->
+<!-- <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" style="">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<select name="" id="">
+  <option *ngFor="let item of selectValues" [value]="item.id">
+    {{ item.name }}
+  </option>
+</select>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TableObjectService } from '../table-object.service';
 import { CommonModule } from '@angular/common';
 import { TableService } from '../table.service';
+import { ProductService } from './add-products.service';
 
 @Component({
   selector: 'app-add-products',
@@ -11,22 +12,33 @@ import { TableService } from '../table.service';
   styleUrl: './add-products.component.css'
 })
 export class AddProductsComponent implements OnInit {
-  constructor(private service: TableService) {
+  constructor(private service: ProductService) {
 
   }
-  
-  Datas:any[] = [];
+
+  //datasets: any[] = [];
+  selectValues: any[] = []
   ngOnInit(): void {
-    this.service.getAllDataSet()
-              .subscribe({
-                next:res=>{
-                  this.Datas=res
-                  console.log("com",this.Datas)
-                },
-                error:err=>console.log(err)
-                
-              } ); 
-   }
+this.selectValues=[
+  {id:1,name:"Janith"},
+  {id:2,name:"Hirun"},
+  {id:3,name:"Helitha"},
+  {id:4,name:"Thilina"},
+  {id:4,name:"Udesh"}
+]
+
+
+
+    // this.service.getAllJobCard()
+    //   .subscribe({
+    //     next: res => {
+    //       this.datasets = res
+    //       console.log("com", this.datasets)
+    //     },
+    //     error: err => console.log(err)
+
+    //   });
+  }
 
 
 }

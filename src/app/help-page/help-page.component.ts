@@ -29,3 +29,4 @@ export class HelpPageComponent implements OnInit {
   }
 
 }
+

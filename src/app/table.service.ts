@@ -7,7 +7,7 @@ import { Observable, tap } from 'rxjs';
 })
 
 export class TableService {
-  hitPoint: string = 'assets/DataSet.json';
+  hitPoint: string = 'https://www.jsondataai.com/api/BbMvszf';
   private https: HttpClient = inject(HttpClient)
   getAllDataSet(): Observable<any[]> {
     return this.https.get<any[]>(this.hitPoint)

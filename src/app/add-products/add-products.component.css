@@ -1,4 +1,4 @@
-/* body{
+body{
     margin: 0;
     padding: 0;
 }
@@ -23,8 +23,9 @@
     border: 2px solid rgb(26, 159, 37);
     margin-top: 5px;
     border-collapse: collapse;
-} */
+}
 table, th,td{
     border-collapse:collapse ;
     border: 2px solid rgb(88, 189, 96);
 }
+
