@@ -16,28 +16,38 @@ export class AddProductsComponent implements OnInit {
 
   }
 
-  //datasets: any[] = [];
+  datasets: any[] = [];
   selectValues: any[] = []
+  hedaerVlaues: any[] = []
   ngOnInit(): void {
-this.selectValues=[
-  {id:1,name:"Janith"},
-  {id:2,name:"Hirun"},
-  {id:3,name:"Helitha"},
-  {id:4,name:"Thilina"},
-  {id:4,name:"Udesh"}
-]
+    this.hedaerVlaues = [
+      { id: 1, name: "Janith" },
+      { id: 2, name: "Hirun" },
+      { id: 3, name: "Helitha" },
+      { id: 4, name: "Thilina" },
+      { id: 5, name: "Udesh" }
+    ]
+    this.selectValues = [
+      { id: 1, name: "Janith" },
+      { id: 2, name: "Hirun" },
+      { id: 3, name: "Helitha" },
+      { id: 4, name: "Thilina" },
+      { id: 4, name: "Udesh" }
+    ]
 
 
 
-    // this.service.getAllJobCard()
-    //   .subscribe({
-    //     next: res => {
-    //       this.datasets = res
-    //       console.log("com", this.datasets)
-    //     },
-    //     error: err => console.log(err)
 
-    //   });
+
+    this.service.getAllJobCard()
+      .subscribe({
+        next: res => {
+          this.datasets = res
+          console.log("com", this.datasets)
+        },
+        error: err => console.log(err)
+
+      });
   }
 
 
