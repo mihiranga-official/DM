@@ -1,0 +1,153 @@
+body {
+  padding: 0;
+  margin: 0;
+
+
+}
+
+
+
+.container>.item {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2%;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+form {
+  border: 3px solid orange;
+  margin-top: 12px;
+}
+
+.second-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  border: 5px solid red;
+  padding: 3%;
+  margin: 5%;
+}
+
+.third-divider {
+  align-items: center;
+  margin: 3%;
+  padding: 2%;
+  border: 5px solid gray;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+
+
+}
+
+.fourth-divider {
+
+  margin: 3%;
+  padding: 2%;
+  border: 5px solid gray;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+}
+
+.divtester {
+  border: 5px solid red;
+}
+
+.maind {
+  display: grid;
+  border: 3px solid blue;
+  margin: 3%;
+  padding: 2%;
+}
+
+.maindiv-second {
+  border: 3px solid black;
+  margin: 3%;
+
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+}
+
+.maindiv-third {
+  border: 3px solid black;
+  margin: 3%;
+  padding: 2%;
+}
+
+.maindiv-fourth {
+  border: 3px solid black;
+  margin: 3%;
+  padding: 2%;
+}
+
+.maindiv-fifth {
+  border: 3px solid black;
+  margin: 3%;
+  padding: 2%;
+}
+
+label {
+  margin-left: 10px;
+  margin-top: 15px;
+  font-weight: 550;
+
+}
+
+input {
+  margin-top: 10px;
+}
+
+.maindiv-second input {
+  font-weight: 620;
+  background-color: rgb(224, 212, 224);
+}
+
+.individer {
+  border: 3px solid rgb(101, 21, 175);
+  margin: 3%;
+  padding: 2%;
+}
+
+.div-div {
+  border: 3px solid rgb(192, 10, 101);
+  margin: 1%;
+  padding: 2%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.div-div-div {
+  border: 3px solid rgb(252, 235, 6);
+
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.div-div-div-div {
+  display: grid;
+  border: 3px solid rgb(18, 172, 18);
+  margin-top: 2px;
+  padding: 1%;
+  margin: 5%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.div-div-div-div-div{
+  display: grid;
+  border: 3px solid rgb(18, 172, 18);
+  margin-top: 2px;
+  padding: 1%;
+  margin: 5%;
+
+}

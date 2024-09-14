@@ -3,11 +3,13 @@ import { TableObjectService } from '../table-object.service';
 import { CommonModule } from '@angular/common';
 import { TableService } from '../table.service';
 import { ProductService } from './add-products.service';
+import { RouterOutlet } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterOutlet,ReactiveFormsModule],
   templateUrl: './add-products.component.html',
   styleUrl: './add-products.component.css'
 })
